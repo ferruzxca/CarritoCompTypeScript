@@ -1,0 +1,27 @@
+{
+  "CDMX": {
+    "Económico": { "cost": 50, "etaDays": 5 },
+    "Estándar": { "cost": 80, "etaDays": 3 },
+    "Exprés": { "cost": 120, "etaDays": 1 }
+  },
+  "EdoMex": {
+    "Económico": { "cost": 60, "etaDays": 5 },
+    "Estándar": { "cost": 90, "etaDays": 3 },
+    "Exprés": { "cost": 130, "etaDays": 1 }
+  },
+  "Jalisco": {
+    "Económico": { "cost": 70, "etaDays": 5 },
+    "Estándar": { "cost": 100, "etaDays": 3 },
+    "Exprés": { "cost": 140, "etaDays": 1 }
+  },
+  "NL": {
+    "Económico": { "cost": 65, "etaDays": 5 },
+    "Estándar": { "cost": 95, "etaDays": 3 },
+    "Exprés": { "cost": 135, "etaDays": 1 }
+  },
+  "Puebla": {
+    "Económico": { "cost": 55, "etaDays": 5 },
+    "Estándar": { "cost": 85, "etaDays": 3 },
+    "Exprés": { "cost": 125, "etaDays": 1 }
+  }
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Carrito - Tienda</title>
+    <link rel="stylesheet" href="/src/styles/variables.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components/navbar.css" />
+    <link rel="stylesheet" href="/src/styles/components/cart.css" />
+  </head>
+  <body>
+    <header><nav id="navbar"></nav></header>
+
+    <main class="container cart-layout">
+      <section class="cart-area">
+        <h1>Carrito de Compras</h1>
+
+        <div id="cart-table-wrap">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th class="col-name">Producto</th>
+                <th class="col-price">Precio unitario</th>
+                <th class="col-qty">Cantidad</th>
+                <th class="col-sub">Subtotal</th>
+                <th class="col-act">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody id="cart-body"></tbody>
+          </table>
+        </div>
+
+        <div id="cart-empty" style="display:none" class="empty">
+          Tu carrito está vacío.
+        </div>
+      </section>
+
+      <aside class="summary">
+        <h2>Resumen</h2>
+        <p>Subtotal: <strong id="sum-subtotal"></strong></p>
+        <p>Envío estimado: <strong id="sum-shipping"></strong></p>
+        <p>Impuestos (16%): <strong id="sum-taxes"></strong></p>
+        <p class="total"><strong>Total:</strong> <strong id="sum-total"></strong></p>
+
+        <div class="actions">
+          <button id="btn-clear" class="btn btn-secondary" type="button">Vaciar carrito</button>
+          <button id="btn-checkout" class="btn btn-primary" type="button">Continuar a Checkout</button>
+        </div>
+      </aside>
+    </main>
+
+    <script type="module" src="/src/components/navbar.ts"></script>
+    <script type="module" src="/src/pages/cart.ts"></script>
+  </body>
+</html>

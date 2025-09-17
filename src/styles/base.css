@@ -1,0 +1,155 @@
+@import './variables.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+button {
+  background-color: var(--c-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--c-text);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--c-primary-700);
+  outline: none;
+}
+
+input,
+select {
+  background-color: var(--c-surface);
+  border: 1px solid var(--c-muted);
+  border-radius: var(--border-radius);
+  color: var(--c-text);
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--c-primary);
+  outline: none;
+  box-shadow: 0 0 5px var(--c-primary);
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.product-card {
+  background-color: var(--c-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  box-shadow: 0 4px 12px var(--c-primary);
+  outline: none;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--c-primary);
+}
+
+.rating {
+  color: gold;
+  margin: 0.25rem 0;
+}
+
+.stock {
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.stock:empty {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .product-card {
+    flex-direction: row;
+    align-items: center;
+  }
+  .product-card img {
+    max-width: 150px;
+    margin-right: 1rem;
+  }
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+}

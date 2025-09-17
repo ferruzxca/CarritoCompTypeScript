@@ -1,0 +1,15 @@
+:root {
+  --c-bg: #0b1021;
+  --c-surface: #121735;
+  --c-primary: #6c2bd9;
+  --c-primary-700: #5820b8;
+  --c-accent: #1e40af;
+  --c-text: #e6e6f0;
+  --c-muted: #9aa0b4;
+  --c-ok: #10b981;
+  --c-warn: #f59e0b;
+  --c-err: #ef4444;
+
+  --border-radius: 8px;
+  --shadow-soft: 0 2px 8px rgba(108, 43, 217, 0.3);
+}

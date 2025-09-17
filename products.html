@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos - Tienda</title>
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/components/product-card.css" />
+  <link rel="stylesheet" href="/src/styles/components/navbar.css" />
+</head>
+<body>
+  <header id="header"></header>
+  <main>
+    <section aria-label="Filtros y búsqueda de productos" class="filters-container">
+      <div class="filter-group">
+        <label for="search">Buscar:</label>
+        <input type="search" id="search" placeholder="Buscar productos" aria-label="Buscar productos" />
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-category">Categoría:</label>
+        <select id="filter-category" aria-controls="products-list">
+          <option value="all">Todas</option>
+          <option value="smartphone">Smartphone</option>
+          <option value="laptop">Laptop</option>
+          <option value="audífonos">Audífonos</option>
+          <option value="smartwatch">Smartwatch</option>
+          <option value="cámara">Cámara</option>
+          <option value="tablet">Tablet</option>
+          <option value="monitor">Monitor</option>
+          <option value="teclado">Teclado</option>
+          <option value="mouse">Mouse</option>
+          <option value="router">Router</option>
+          <option value="ssd">SSD</option>
+          <option value="powerbank">Power Bank</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-stock">Stock:</label>
+        <select id="filter-stock" aria-controls="products-list">
+          <option value="all">Todos</option>
+          <option value="inStock">En existencia</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="sort-price">Ordenar por precio:</label>
+        <select id="sort-price" aria-controls="products-list">
+          <option value="none">Sin orden</option>
+          <option value="asc">Menor a mayor</option>
+          <option value="desc">Mayor a menor</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="products-list" aria-live="polite" aria-label="Lista de productos"></section>
+  </main>
+
+  <script type="module" src="/src/components/navbar.ts"></script>
+  <script type="module" src="/src/pages/products.ts"></script>
+  <script type="module">
+    import { createNavbar } from '/src/components/navbar.ts';
+    document.getElementById('header').appendChild(createNavbar());
+  </script>
+</body>
+</html>

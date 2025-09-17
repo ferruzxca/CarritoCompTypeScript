@@ -1,122 +1,69 @@
 [
-  {
-    "id": "p1",
-    "name": "Smartphone X100",
-    "price": 7999,
-    "stock": 10,
-    "category": "smartphone",
-    "rating": 4.5,
-    "img": "smartphone.jpg",
-    "shipFrom": "CDMX"
-  },
-  {
-    "id": "p2",
-    "name": "Laptop Pro 15\"",
-    "price": 15999,
-    "stock": 5,
-    "category": "laptop",
-    "rating": 4.7,
-    "img": "laptop.jpg",
-    "shipFrom": "EdoMex"
-  },
-  {
-    "id": "p3",
-    "name": "Audífonos Wireless",
-    "price": 1999,
-    "stock": 20,
-    "category": "audífonos",
-    "rating": 4.2,
-    "img": "headphones.jpg",
-    "shipFrom": "Jalisco"
-  },
-  {
-    "id": "p4",
-    "name": "Smartwatch S3",
-    "price": 3499,
-    "stock": 15,
-    "category": "smartwatch",
-    "rating": 4.0,
-    "img": "smartwatch.jpg",
-    "shipFrom": "NL"
-  },
-  {
-    "id": "p5",
-    "name": "Cámara Digital",
-    "price": 4999,
-    "stock": 8,
-    "category": "cámara",
-    "rating": 4.3,
-    "img": "camera.jpg",
-    "shipFrom": "Puebla"
-  },
-  {
-    "id": "p6",
-    "name": "Tablet 10\"",
-    "price": 5999,
-    "stock": 12,
-    "category": "tablet",
-    "rating": 4.1,
-    "img": "tablet.jpg",
-    "shipFrom": "CDMX"
-  },
-  {
-    "id": "p7",
-    "name": "Monitor 24\"",
-    "price": 3999,
-    "stock": 7,
-    "category": "monitor",
-    "rating": 4.4,
-    "img": "monitor.jpg",
-    "shipFrom": "EdoMex"
-  },
-  {
-    "id": "p8",
-    "name": "Teclado Mecánico",
-    "price": 1499,
-    "stock": 25,
-    "category": "teclado",
-    "rating": 4.6,
-    "img": "keyboard.jpg",
-    "shipFrom": "Jalisco"
-  },
-  {
-    "id": "p9",
-    "name": "Mouse Gaming",
-    "price": 799,
-    "stock": 30,
-    "category": "mouse",
-    "rating": 4.5,
-    "img": "mouse.jpg",
-    "shipFrom": "NL"
-  },
-  {
-    "id": "p10",
-    "name": "Router WiFi 6",
-    "price": 1299,
-    "stock": 18,
-    "category": "router",
-    "rating": 4.0,
-    "img": "router.jpg",
-    "shipFrom": "Puebla"
-  },
-  {
-    "id": "p11",
-    "name": "SSD 1TB",
-    "price": 2499,
-    "stock": 10,
-    "category": "ssd",
-    "rating": 4.7,
-    "img": "ssd.jpg",
-    "shipFrom": "CDMX"
-  },
-  {
-    "id": "p12",
-    "name": "Power Bank 20000mAh",
-    "price": 899,
-    "stock": 22,
-    "category": "powerbank",
-    "rating": 4.3,
-    "img": "powerbank.jpg",
-    "shipFrom": "EdoMex"
-  }
+  {"id":"p001","name":"iPhone 16 Pro Max","price":34999,"stock":12,"category":"smartphone","rating":4.9,"img":"iphone-16-pro-max.jpg","shipFrom":"CDMX"},
+  {"id":"p002","name":"iPhone 16 Pro","price":31999,"stock":15,"category":"smartphone","rating":4.8,"img":"iphone-16-pro.jpg","shipFrom":"CDMX"},
+  {"id":"p003","name":"iPhone 16 Plus","price":27999,"stock":18,"category":"smartphone","rating":4.7,"img":"iphone-16-plus.jpg","shipFrom":"CDMX"},
+  {"id":"p004","name":"iPhone 16","price":23999,"stock":20,"category":"smartphone","rating":4.7,"img":"iphone-16.jpg","shipFrom":"CDMX"},
+  {"id":"p005","name":"iPhone 15 Pro Max","price":32999,"stock":10,"category":"smartphone","rating":4.8,"img":"iphone-15-pro-max.jpg","shipFrom":"CDMX"},
+  {"id":"p006","name":"iPhone 15 Pro","price":29999,"stock":14,"category":"smartphone","rating":4.7,"img":"iphone-15-pro.jpg","shipFrom":"CDMX"},
+  {"id":"p007","name":"iPhone 15 Plus","price":25999,"stock":16,"category":"smartphone","rating":4.6,"img":"iphone-15-plus.jpg","shipFrom":"CDMX"},
+  {"id":"p008","name":"iPhone 15","price":21999,"stock":22,"category":"smartphone","rating":4.6,"img":"iphone-15.jpg","shipFrom":"CDMX"},
+  {"id":"p009","name":"iPhone SE (3ra gen)","price":9999,"stock":25,"category":"smartphone","rating":4.5,"img":"iphone-se-3.jpg","shipFrom":"CDMX"},
+
+  {"id":"p010","name":"iPad Pro 13” (M4)","price":34999,"stock":9,"category":"tablet","rating":4.9,"img":"ipad-pro-13-m4.jpg","shipFrom":"CDMX"},
+  {"id":"p011","name":"iPad Pro 11” (M4)","price":29999,"stock":11,"category":"tablet","rating":4.8,"img":"ipad-pro-11-m4.jpg","shipFrom":"CDMX"},
+  {"id":"p012","name":"iPad Air 13” (M2)","price":19999,"stock":13,"category":"tablet","rating":4.7,"img":"ipad-air-13-m2.jpg","shipFrom":"CDMX"},
+  {"id":"p013","name":"iPad Air 11” (M2)","price":16999,"stock":17,"category":"tablet","rating":4.7,"img":"ipad-air-11-m2.jpg","shipFrom":"CDMX"},
+  {"id":"p014","name":"iPad 10ma gen 10.9”","price":10999,"stock":24,"category":"tablet","rating":4.5,"img":"ipad-10th-10-9.jpg","shipFrom":"CDMX"},
+  {"id":"p015","name":"iPad mini (6ta gen)","price":13999,"stock":12,"category":"tablet","rating":4.6,"img":"ipad-mini-6.jpg","shipFrom":"CDMX"},
+
+  {"id":"p016","name":"MacBook Air 13” (M3)","price":21999,"stock":10,"category":"laptop","rating":4.8,"img":"macbook-air-13-m3.jpg","shipFrom":"CDMX"},
+  {"id":"p017","name":"MacBook Air 15” (M3)","price":25999,"stock":8,"category":"laptop","rating":4.8,"img":"macbook-air-15-m3.jpg","shipFrom":"CDMX"},
+  {"id":"p018","name":"MacBook Pro 14” (M3 Pro)","price":39999,"stock":7,"category":"laptop","rating":4.9,"img":"macbook-pro-14-m3-pro.jpg","shipFrom":"CDMX"},
+  {"id":"p019","name":"MacBook Pro 16” (M3 Max)","price":54999,"stock":5,"category":"laptop","rating":4.9,"img":"macbook-pro-16-m3-max.jpg","shipFrom":"CDMX"},
+
+  {"id":"p020","name":"iMac 24” (M3)","price":29999,"stock":9,"category":"desktop","rating":4.8,"img":"imac-24-m3.jpg","shipFrom":"CDMX"},
+  {"id":"p021","name":"Mac mini (M2)","price":12999,"stock":18,"category":"desktop","rating":4.7,"img":"mac-mini-m2.jpg","shipFrom":"CDMX"},
+  {"id":"p022","name":"Mac Studio (M2 Max)","price":49999,"stock":6,"category":"desktop","rating":4.8,"img":"mac-studio-m2-max.jpg","shipFrom":"CDMX"},
+  {"id":"p023","name":"Mac Pro (M2 Ultra)","price":119999,"stock":3,"category":"desktop","rating":4.8,"img":"mac-pro-m2-ultra.jpg","shipFrom":"CDMX"},
+
+  {"id":"p024","name":"Apple Watch Ultra 2","price":17999,"stock":10,"category":"smartwatch","rating":4.8,"img":"apple-watch-ultra-2.jpg","shipFrom":"CDMX"},
+  {"id":"p025","name":"Apple Watch Series 9","price":12999,"stock":14,"category":"smartwatch","rating":4.7,"img":"apple-watch-series-9.jpg","shipFrom":"CDMX"},
+  {"id":"p026","name":"Apple Watch SE (2da gen)","price":7499,"stock":20,"category":"smartwatch","rating":4.6,"img":"apple-watch-se-2.jpg","shipFrom":"CDMX"},
+
+  {"id":"p027","name":"AirPods Pro (2da gen USB-C)","price":4999,"stock":30,"category":"earbuds","rating":4.8,"img":"airpods-pro-2-usbc.jpg","shipFrom":"CDMX"},
+  {"id":"p028","name":"AirPods (3ra gen)","price":3999,"stock":28,"category":"earbuds","rating":4.6,"img":"airpods-3.jpg","shipFrom":"CDMX"},
+  {"id":"p029","name":"AirPods (2da gen)","price":2999,"stock":26,"category":"earbuds","rating":4.5,"img":"airpods-2.jpg","shipFrom":"CDMX"},
+  {"id":"p030","name":"AirPods Max","price":12999,"stock":12,"category":"headphones","rating":4.7,"img":"airpods-max.jpg","shipFrom":"CDMX"},
+
+  {"id":"p031","name":"Apple TV 4K 128GB","price":3799,"stock":22,"category":"tvbox","rating":4.7,"img":"apple-tv-4k-128gb.jpg","shipFrom":"CDMX"},
+
+  {"id":"p032","name":"Studio Display 27” 5K","price":34999,"stock":5,"category":"monitor","rating":4.7,"img":"studio-display-27-5k.jpg","shipFrom":"CDMX"},
+  {"id":"p033","name":"Pro Display XDR 32” 6K","price":119999,"stock":2,"category":"monitor","rating":4.8,"img":"pro-display-xdr-32-6k.jpg","shipFrom":"CDMX"},
+
+  {"id":"p034","name":"Magic Keyboard","price":2499,"stock":25,"category":"accessory","rating":4.6,"img":"magic-keyboard.jpg","shipFrom":"CDMX"},
+  {"id":"p035","name":"Magic Keyboard con Touch ID","price":3799,"stock":18,"category":"accessory","rating":4.7,"img":"magic-keyboard-touch-id.jpg","shipFrom":"CDMX"},
+  {"id":"p036","name":"Magic Mouse","price":1999,"stock":30,"category":"accessory","rating":4.5,"img":"magic-mouse.jpg","shipFrom":"CDMX"},
+  {"id":"p037","name":"Magic Trackpad","price":2999,"stock":20,"category":"accessory","rating":4.6,"img":"magic-trackpad.jpg","shipFrom":"CDMX"},
+
+  {"id":"p038","name":"Magic Keyboard iPad Pro 11” (M4)","price":7999,"stock":12,"category":"accessory","rating":4.7,"img":"magic-keyboard-ipad-pro-11-m4.jpg","shipFrom":"CDMX"},
+  {"id":"p039","name":"Magic Keyboard iPad Pro 13” (M4)","price":8999,"stock":10,"category":"accessory","rating":4.7,"img":"magic-keyboard-ipad-pro-13-m4.jpg","shipFrom":"CDMX"},
+  {"id":"p040","name":"Smart Keyboard Folio 11”","price":4999,"stock":15,"category":"accessory","rating":4.5,"img":"smart-keyboard-folio-11.jpg","shipFrom":"CDMX"},
+  {"id":"p041","name":"Smart Keyboard Folio 12.9”","price":5999,"stock":9,"category":"accessory","rating":4.5,"img":"smart-keyboard-folio-12-9.jpg","shipFrom":"CDMX"},
+
+  {"id":"p042","name":"Apple Pencil Pro","price":3299,"stock":18,"category":"stylus","rating":4.8,"img":"apple-pencil-pro.jpg","shipFrom":"CDMX"},
+  {"id":"p043","name":"Apple Pencil (2da gen)","price":2799,"stock":20,"category":"stylus","rating":4.7,"img":"apple-pencil-2nd-gen.jpg","shipFrom":"CDMX"},
+  {"id":"p044","name":"Apple Pencil USB-C","price":1999,"stock":22,"category":"stylus","rating":4.5,"img":"apple-pencil-usbc.jpg","shipFrom":"CDMX"},
+
+  {"id":"p045","name":"AirTag (1 pieza)","price":799,"stock":50,"category":"tracker","rating":4.7,"img":"airtag-1-pack.jpg","shipFrom":"CDMX"},
+  {"id":"p046","name":"AirTag (4 piezas)","price":2699,"stock":30,"category":"tracker","rating":4.8,"img":"airtag-4-pack.jpg","shipFrom":"CDMX"},
+
+  {"id":"p047","name":"Cargador MagSafe","price":1199,"stock":35,"category":"charger","rating":4.6,"img":"magsafe-charger.jpg","shipFrom":"CDMX"},
+  {"id":"p048","name":"Batería MagSafe","price":2999,"stock":14,"category":"charger","rating":4.5,"img":"magsafe-battery-pack.jpg","shipFrom":"CDMX"},
+  {"id":"p049","name":"Adaptador USB-C 20W","price":499,"stock":40,"category":"charger","rating":4.6,"img":"usb-c-power-adapter-20w.jpg","shipFrom":"CDMX"},
+
+  {"id":"p050","name":"Cable USB-C 1 m","price":399,"stock":60,"category":"cable","rating":4.6,"img":"usb-c-cable-1m.jpg","shipFrom":"CDMX"},
+  {"id":"p051","name":"Cable USB-C 2 m","price":699,"stock":55,"category":"cable","rating":4.6,"img":"usb-c-cable-2m.jpg","shipFrom":"CDMX"},
+
+  {"id":"p052","name":"HomePod mini","price":2299,"stock":16,"category":"speaker","rating":4.6,"img":"homepod-mini.jpg","shipFrom":"CDMX"},
+  {"id":"p053","name":"HomePod (2da gen)","price":5899,"stock":8,"category":"speaker","rating":4.7,"img":"homepod-2nd-gen.jpg","shipFrom":"CDMX"}
 ]

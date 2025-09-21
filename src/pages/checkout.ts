@@ -1,3 +1,4 @@
+// src/pages/checkout.ts
 import { store } from "../state/store";
 import { createStepper } from "../components/stepper";
 import { formatCurrency } from "../utils/format";
@@ -18,19 +19,27 @@ const main = document.querySelector("main") as HTMLElement;
 const steps = ["Método de pago", "Dirección y envío", "Revisión y confirmación"];
 let currentStep = 0;
 
-function checkSession() { if (!store.getUser()) window.location.href = "index.html"; }
+/* ---------- Guards ---------- */
+function checkSession() {
+  if (!store.getUser()) {
+    const url = new URL("login.html", window.location.href);
+    url.searchParams.set("next", "checkout.html");
+    window.location.href = url.toString();
+  }
+}
 function requireStep(step: number) {
   if (step >= 1 && !store.getPayment()) currentStep = 0;
   if (step >= 2 && !store.getAddress()) currentStep = 1;
 }
 
+/* ---------- Root render ---------- */
 function render() {
   requireStep(currentStep);
-  main.classList.add("checkout-main");
   main.innerHTML = "";
+  main.classList.add("checkout-main");
   main.appendChild(createStepper(steps, currentStep));
   if (currentStep === 0) renderPaymentStep();
-  else if (currentStep === 1) void renderAddressStep();   // async
+  else if (currentStep === 1) void renderAddressStep();
   else renderReviewStep();
 }
 
@@ -80,14 +89,17 @@ function renderPaymentStep() {
   const err = section.querySelector<HTMLElement>("#payment-error")!;
   const radios = form.querySelectorAll<HTMLInputElement>('input[name="payment-type"]');
 
-  radios.forEach((r) => r.addEventListener("change", () => {
-    const card = r.value === "card" && r.checked;
-    cardFields.style.display = card ? "grid" : "none";
-    transferFields.style.display = card ? "none" : "grid";
-  }));
+  radios.forEach((r) =>
+    r.addEventListener("change", () => {
+      const card = r.value === "card" && r.checked;
+      cardFields.style.display = card ? "grid" : "none";
+      transferFields.style.display = card ? "none" : "grid";
+    })
+  );
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault(); err.textContent = "";
+    e.preventDefault();
+    err.textContent = "";
     const selected = form.querySelector<HTMLInputElement>('input[name="payment-type"]:checked');
     const type = (selected?.value ?? "card") as "card" | "transfer";
 
@@ -102,20 +114,24 @@ function renderPaymentStep() {
       if (!ref) { err.textContent = "Ingrese la referencia."; return; }
       store.setPayment({ type, ref });
     }
-    currentStep = 1; render();
+
+    currentStep = 1;
+    render();
   });
 }
 
 function isValidCardNumber(cardNum: string): boolean {
   let sum = 0, dbl = false;
   for (let i = cardNum.length - 1; i >= 0; i--) {
-    let d = cardNum.charCodeAt(i) - 48; if (d < 0 || d > 9) return false;
-    if (dbl) { d *= 2; if (d > 9) d -= 9; } sum += d; dbl = !dbl;
+    let d = cardNum.charCodeAt(i) - 48;
+    if (d < 0 || d > 9) return false;
+    if (dbl) { d *= 2; if (d > 9) d -= 9; }
+    sum += d; dbl = !dbl;
   }
   return sum % 10 === 0;
 }
 
-/* ---------- Paso 1: Dirección y envío ---------- */
+/* ---------- Paso 1: Dirección y envío (async) ---------- */
 async function renderAddressStep() {
   const data = await loadUbicaciones();
 
@@ -171,7 +187,8 @@ async function renderAddressStep() {
   const shippingRadios = form.querySelectorAll<HTMLInputElement>('input[name="shipping"]');
   const info = section.querySelector<HTMLElement>("#shipping-info")!;
   const err = section.querySelector<HTMLElement>("#address-error")!;
-  section.querySelector<HTMLButtonElement>("#btn-back")!.addEventListener("click", () => { currentStep = 0; render(); });
+  section.querySelector<HTMLButtonElement>("#btn-back")!
+    .addEventListener("click", () => { currentStep = 0; render(); });
 
   // Estados
   stateSel.innerHTML =
@@ -215,7 +232,7 @@ async function renderAddressStep() {
   });
 }
 
-/* ---------- Paso 2: Revisión (ticket centrado) ---------- */
+/* ---------- Paso 2: Revisión ---------- */
 function renderReviewStep() {
   const section = document.createElement("section");
   section.className = "panel ticket-wrap";
@@ -265,18 +282,30 @@ function renderReviewStep() {
   `;
   main.appendChild(section);
 
-  section.querySelector<HTMLButtonElement>("#btn-back")!.addEventListener("click", () => { currentStep = 1; render(); });
-  section.querySelector<HTMLButtonElement>("#confirm-btn")!.addEventListener("click", () => {
-    const order = {
-      id: Date.now().toString(),
-      items: cart, subtotal, shipping: shipping.cost || 0, taxes, total,
-      address, shippingOpt: shipping, payment, createdAt: new Date().toISOString(),
-    };
-    store.saveOrder(order as any);
-    store.clearCart();
-    window.location.href = "thanks.html";
-  });
+  section.querySelector<HTMLButtonElement>("#btn-back")!
+    .addEventListener("click", () => { currentStep = 1; render(); });
+  section.querySelector<HTMLButtonElement>("#confirm-btn")!
+    .addEventListener("click", () => {
+      const order = {
+        id: Date.now().toString(),
+        items: cart,
+        subtotal,
+        shipping: shipping.cost || 0,
+        taxes,
+        total,
+        address,
+        shippingOpt: shipping,
+        payment,
+        createdAt: new Date().toISOString(),
+      };
+      store.saveOrder(order as any);
+      store.clearCart();
+      window.location.href = "thanks.html";
+    });
 }
 
 /* ---------- boot ---------- */
-document.addEventListener("DOMContentLoaded", () => { checkSession(); render(); });
+document.addEventListener("DOMContentLoaded", () => {
+  checkSession();
+  render();
+});

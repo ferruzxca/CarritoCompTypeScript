@@ -1,5 +1,5 @@
 [
-  {"id":"p001","name":"iPhone 16 Pro Max","price":34999,"stock":12,"category":"smartphone","rating":4.9,"img":"iphone-16-pro-max.jpg","shipFrom":"CDMX"},
+  {"id":"p001","name":"iPhone 16 Pro Max","price":34999,"stock":12,"category":"smartphone","rating":4.9,"img":"smartphone.jpg","shipFrom":"CDMX"},
   {"id":"p002","name":"iPhone 16 Pro","price":31999,"stock":15,"category":"smartphone","rating":4.8,"img":"iphone-16-pro.jpg","shipFrom":"CDMX"},
   {"id":"p003","name":"iPhone 16 Plus","price":27999,"stock":18,"category":"smartphone","rating":4.7,"img":"iphone-16-plus.jpg","shipFrom":"CDMX"},
   {"id":"p004","name":"iPhone 16","price":23999,"stock":20,"category":"smartphone","rating":4.7,"img":"iphone-16.jpg","shipFrom":"CDMX"},

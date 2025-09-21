@@ -1,84 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Productos - Tienda</title>
     <link rel="stylesheet" href="/src/styles/variables.css" />
     <link rel="stylesheet" href="/src/styles/base.css" />
-    <link rel="stylesheet" href="/src/styles/components/product-card.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css" />
+    <link rel="stylesheet" href="/src/styles/components/products.css" />
   </head>
   <body>
-    <header id="header"></header>
-    <main>
-      <section
-        aria-label="Filtros y búsqueda de productos"
-        class="filters-container"
-      >
-        <div class="filter-group">
-          <label for="search">Buscar:</label>
-          <input
-            type="search"
-            id="search"
-            placeholder="Buscar productos"
-            aria-label="Buscar productos"
-          />
-        </div>
+    <header><nav id="navbar"></nav></header>
 
-        <div class="filter-group">
-          <label for="filter-category">Categoría:</label>
-          <select id="filter-category" aria-controls="products-list">
-            <option value="all">Todas</option>
-            <option value="">Todas</option>
-            <option value="smartphone">iPhone</option>
-            <option value="tablet">iPad</option>
-            <option value="laptop">MacBook</option>
-            <option value="desktop">iMac y Mac de escritorio</option>
-            <option value="smartwatch">Apple Watch</option>
-            <option value="earbuds">AirPods</option>
-            <option value="headphones">AirPods Max</option>
-            <option value="tvbox">Apple TV</option>
-            <option value="monitor">Monitores</option>
-            <option value="accessory">Accesorios</option>
-            <option value="stylus">Apple Pencil</option>
-            <option value="tracker">AirTag</option>
-            <option value="charger">Cargadores</option>
-            <option value="cable">Cables</option>
-            <option value="speaker">HomePod</option>
-          </select>
-        </div>
-
-        <div class="filter-group">
-          <label for="filter-stock">Stock:</label>
-          <select id="filter-stock" aria-controls="products-list">
-            <option value="all">Todos</option>
-            <option value="inStock">En existencia</option>
-          </select>
-        </div>
-
-        <div class="filter-group">
-          <label for="sort-price">Ordenar por precio:</label>
-          <select id="sort-price" aria-controls="products-list">
-            <option value="none">Sin orden</option>
-            <option value="asc">Menor a mayor</option>
-            <option value="desc">Mayor a menor</option>
-          </select>
-        </div>
+    <main class="container">
+      <!-- Barra de filtros (opcional: tu TS ya la soporta si existen estos IDs) -->
+      <section class="filters">
+        <input id="search" type="search" placeholder="Buscar..." />
+        <select id="filter-category">
+          <option value="all">Todas las categorías</option>
+          <option value="smartphone">Smartphones</option>
+          <option value="laptop">Laptops</option>
+          <option value="audio">Audio</option>
+          <option value="periferico">Periféricos</option>
+        </select>
+        <select id="filter-stock">
+          <option value="all">Todo</option>
+          <option value="inStock">En existencia</option>
+        </select>
+        <select id="sort-price">
+          <option value="none">Sin ordenar</option>
+          <option value="asc">Precio ↑</option>
+          <option value="desc">Precio ↓</option>
+        </select>
       </section>
 
-      <section
-        id="products-list"
-        aria-live="polite"
-        aria-label="Lista de productos"
-      ></section>
+      <section id="products-list" class="products-grid"></section>
     </main>
 
     <script type="module" src="/src/components/navbar.ts"></script>
     <script type="module" src="/src/pages/products.ts"></script>
-    <script type="module">
-      import { createNavbar } from "/src/components/navbar.ts";
-      document.getElementById("header").appendChild(createNavbar());
-    </script>
   </body>
 </html>

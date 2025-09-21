@@ -1,106 +1,106 @@
-import type { Product } from '../types/models';
-import { createProductCard } from '../components/product-card';
-import { showToast } from '../components/toast';
-import { store } from "../state/store";
-if (!store.getUser()) {
-  window.location.href = "index.html"; // fuerza ir a login si no hay sesión
-}
+import type { Product } from "../types/models";
+import { createProductCard } from "../components/product-card";
+import { showToast } from "../components/toast";
+import * as store from "../state/store";
 
-const productsContainer = document.getElementById('products-list')!;
-const navbar = document.querySelector('nav')!;
-const searchInput = document.getElementById('search') as HTMLInputElement;
-const filterCategory = document.getElementById('filter-category') as HTMLSelectElement;
-const filterStock = document.getElementById('filter-stock') as HTMLSelectElement;
-const sortPrice = document.getElementById('sort-price') as HTMLSelectElement;
+const productsContainer = document.getElementById("products-list") as HTMLElement;
+const searchInput = document.getElementById("search") as HTMLInputElement;
+const filterCategory = document.getElementById("filter-category") as HTMLSelectElement;
+const filterStock = document.getElementById("filter-stock") as HTMLSelectElement;
+const sortPrice = document.getElementById("sort-price") as HTMLSelectElement;
 
 let products: Product[] = [];
-let filteredProducts: Product[] = [];
+let filtered: Product[] = [];
+
+function safeEl<T extends HTMLElement>(el: T | null, name: string): T {
+  if (!el) throw new Error(`Falta el elemento: ${name}`);
+  return el;
+}
+function debounce<T extends (...a: any[]) => void>(fn: T, ms = 200): T {
+  let t: number | undefined;
+  return ((...args: any[]) => {
+    window.clearTimeout(t);
+    t = window.setTimeout(() => fn(...args), ms);
+  }) as T;
+}
 
 async function loadProducts() {
+  const root = safeEl(productsContainer, "#products-list");
   try {
-    const res = await fetch('/data/productos.json'); // Ruta pública
-    if (!res.ok) throw new Error('Error al cargar productos');
-    products = await res.json();
-    filteredProducts = [...products];
+    root.innerHTML = `<p>Cargando productos…</p>`;
+    const res = await fetch("/data/productos.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("Error al cargar productos");
+    products = (await res.json()) as Product[];
+    filtered = [...products];
     renderProducts();
-  } catch (error) {
-    productsContainer.innerHTML = `<p>Error al cargar productos.</p>`;
+  } catch (e) {
+    root.innerHTML = `<p style="color:var(--c-err)">Error al cargar productos.</p>`;
   }
 }
 
 function renderProducts() {
-  productsContainer.innerHTML = '';
-  if (filteredProducts.length === 0) {
-    productsContainer.innerHTML = '<p>No se encontraron productos.</p>';
+  const root = safeEl(productsContainer, "#products-list");
+  root.innerHTML = "";
+
+  if (!filtered.length) {
+    root.innerHTML = `<p>No se encontraron productos.</p>`;
     return;
   }
-  filteredProducts.forEach((p) => {
+
+  const frag = document.createDocumentFragment();
+  for (const p of filtered) {
     const card = createProductCard(p);
-    card.addEventListener('add-to-cart', (e: Event) => {
-      const detail = (e as CustomEvent).detail;
+    card.addEventListener("add-to-cart", (ev: Event) => {
+      const detail = (ev as CustomEvent).detail as { product: Product; qty: number };
       store.addToCart(detail.product, detail.qty);
-      showToast(`Agregaste ${detail.qty} x ${detail.product.name} al carrito.`);
+      showToast(`Agregaste ${detail.qty} × ${detail.product.name} al carrito.`);
     });
-    productsContainer.appendChild(card);
-  });
+    frag.appendChild(card);
+  }
+  root.appendChild(frag);
 }
 
 function applyFilters() {
-  let temp = [...products];
+  let tmp = [...products];
 
-  // Filtro categoría
-  const cat = filterCategory.value;
-  if (cat !== 'all') {
-    temp = temp.filter((p) => p.category === cat);
-  }
+  const cat = filterCategory?.value ?? "all";
+  if (cat !== "all") tmp = tmp.filter((p) => p.category === cat);
 
-  // Filtro stock
-  if (filterStock.value === 'inStock') {
-    temp = temp.filter((p) => p.stock > 0);
-  }
+  const stockSel = filterStock?.value ?? "all";
+  if (stockSel === "inStock") tmp = tmp.filter((p) => (p.stock ?? 0) > 0);
 
-  // Búsqueda
-  const searchTerm = searchInput.value.trim().toLowerCase();
-  if (searchTerm) {
-    temp = temp.filter((p) => p.name.toLowerCase().includes(searchTerm));
-  }
+  const q = (searchInput?.value ?? "").trim().toLowerCase();
+  if (q) tmp = tmp.filter((p) => p.name.toLowerCase().includes(q));
 
-  // Ordenar por precio
-  if (sortPrice.value === 'asc') {
-    temp.sort((a, b) => a.price - b.price);
-  } else if (sortPrice.value === 'desc') {
-    temp.sort((a, b) => b.price - a.price);
-  }
+  const ord = sortPrice?.value ?? "none";
+  if (ord === "asc") tmp.sort((a, b) => a.price - b.price);
+  if (ord === "desc") tmp.sort((a, b) => b.price - a.price);
 
-  filteredProducts = temp;
+  filtered = tmp;
   renderProducts();
 }
 
 function setupFilters() {
-  filterCategory.addEventListener('change', applyFilters);
-  filterStock.addEventListener('change', applyFilters);
-  sortPrice.addEventListener('change', applyFilters);
-  searchInput.addEventListener('input', applyFilters);
+  if (filterCategory) filterCategory.addEventListener("change", applyFilters);
+  if (filterStock) filterStock.addEventListener("change", applyFilters);
+  if (sortPrice) sortPrice.addEventListener("change", applyFilters);
+  if (searchInput) searchInput.addEventListener("input", debounce(applyFilters, 180));
 }
 
-function checkSession() {
-  if (!store.getUser ()) {
-    window.location.href = 'index.html';
-  }
-}
-
-function setupNavbar() {
-  const nav = document.querySelector('nav')!;
-  nav.addEventListener('search-products', (e: Event) => {
-    const detail = (e as CustomEvent).detail as string;
-    searchInput.value = detail;
-    applyFilters();
+function setupNavbarBridge() {
+  const nav = document.querySelector("nav");
+  if (!nav) return;
+  nav.addEventListener("search-products", (e: Event) => {
+    const term = (e as CustomEvent<string>).detail || "";
+    if (searchInput) {
+      searchInput.value = term;
+      applyFilters();
+    }
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  checkSession();
-  setupNavbar();
+document.addEventListener("DOMContentLoaded", () => {
+  setupNavbarBridge();
   setupFilters();
   loadProducts();
 });

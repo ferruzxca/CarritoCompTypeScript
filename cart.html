@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Carrito - Tienda</title>
+
     <link rel="stylesheet" href="/src/styles/variables.css" />
     <link rel="stylesheet" href="/src/styles/base.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css" />
@@ -17,7 +18,7 @@
         <h1>Carrito de Compras</h1>
 
         <div id="cart-table-wrap">
-          <table class="tbl">
+          <table class="tbl" aria-label="Tabla de carrito">
             <thead>
               <tr>
                 <th class="col-name">Producto</th>
@@ -31,21 +32,21 @@
           </table>
         </div>
 
-        <div id="cart-empty" style="display:none" class="empty">
+        <div id="cart-empty" class="empty" style="display:none">
           Tu carrito está vacío.
         </div>
       </section>
 
       <aside class="summary">
         <h2>Resumen</h2>
-        <p>Subtotal: <strong id="sum-subtotal"></strong></p>
-        <p>Envío estimado: <strong id="sum-shipping"></strong></p>
-        <p>Impuestos (16%): <strong id="sum-taxes"></strong></p>
-        <p class="total"><strong>Total:</strong> <strong id="sum-total"></strong></p>
+        <p>Subtotal: <strong id="sum-subtotal">—</strong></p>
+        <p>Envío estimado: <strong id="sum-shipping">—</strong></p>
+        <p>Impuestos (16%): <strong id="sum-taxes">—</strong></p>
+        <p class="total"><strong>Total:</strong> <strong id="sum-total">—</strong></p>
 
         <div class="actions">
           <button id="btn-clear" class="btn btn-secondary" type="button">Vaciar carrito</button>
-          <button id="btn-checkout" class="btn btn-primary" type="button">Continuar a Checkout</button>
+          <button id="btn-checkout" class="btn btn-primary" type="button">Checkout</button>
         </div>
       </aside>
     </main>

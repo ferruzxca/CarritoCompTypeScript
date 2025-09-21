@@ -1,5 +1,5 @@
 // src/pages/cart.ts
-import * as store from "../state/store";
+import { store } from "../state/store";
 import { formatCurrency } from "../utils/format";
 
 type Cart = ReturnType<typeof store.getCart>;
@@ -83,7 +83,7 @@ function clampInt(v: string, min: number, max: number) {
 function wireEvents() {
   const tbody = $("#cart-body") as HTMLTableSectionElement | null;
 
-  // Delegación: qty y eliminar
+  // qty y eliminar por delegación
   if (tbody) {
     tbody.addEventListener("change", (e) => {
       const target = e.target as HTMLElement;
@@ -135,14 +135,10 @@ function wireEvents() {
   const btnCheckout = $("#btn-checkout") as HTMLButtonElement | null;
   if (btnCheckout) {
     btnCheckout.addEventListener("click", () => {
-      const user = typeof store.getUser === "function" ? store.getUser() : null;
-      if (!user) {
-        const url = new URL("login.html", window.location.href);
-        url.searchParams.set("next", "checkout.html");
-        window.location.href = url.toString();
-        return;
-      }
-      window.location.href = "checkout.html";
+      // Siempre pasar por login antes de checkout
+      const url = new URL("login.html", window.location.href);
+      url.searchParams.set("next", "checkout.html");
+      window.location.href = url.toString();
     });
   }
 }

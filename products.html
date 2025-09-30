@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -14,26 +14,35 @@
 
     <main class="container">
       <!-- Barra de filtros (opcional: tu TS ya la soporta si existen estos IDs) -->
-      <section class="filters">
+      <!-- Filtros accesibles -->
+      <section class="filters" aria-label="Filtros de productos">
+        <label for="search" class="sr-only">Buscar productos</label>
         <input id="search" type="search" placeholder="Buscar..." />
-        <select id="filter-category">
+
+        <label for="filter-category" class="sr-only">Categoría</label>
+        <select id="filter-category" aria-label="Categoría">
           <option value="all">Todas las categorías</option>
           <option value="smartphone">Smartphones</option>
           <option value="laptop">Laptops</option>
           <option value="audio">Audio</option>
           <option value="periferico">Periféricos</option>
         </select>
-        <select id="filter-stock">
+
+        <label for="filter-stock" class="sr-only">Disponibilidad</label>
+        <select id="filter-stock" aria-label="Disponibilidad">
           <option value="all">Todo</option>
           <option value="inStock">En existencia</option>
         </select>
-        <select id="sort-price">
+
+        <label for="sort-price" class="sr-only">Ordenar por precio</label>
+        <select id="sort-price" aria-label="Ordenar por precio">
           <option value="none">Sin ordenar</option>
           <option value="asc">Precio ↑</option>
           <option value="desc">Precio ↓</option>
         </select>
       </section>
 
+      <!-- Contenedor requerido por products.ts -->
       <section id="products-list" class="products-grid"></section>
     </main>
 

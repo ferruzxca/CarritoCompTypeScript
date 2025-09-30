@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tienda</title>
+    <!-- Redirige una sola vez a products.html -->
+    <script>
+      (function () {
+        var target = "products.html";
+        if (!location.pathname.endsWith("/" + target)) {
+          location.replace(target);
+        }
+      })();
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=products.html" />
+    </noscript>
+  </head>
+  <body></body>
+</html>

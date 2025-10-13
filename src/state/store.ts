@@ -1,8 +1,3 @@
-// src/state/store.ts
-// Uso recomendado en pages/components:
-//   import * as store from "../state/store";
-//   // o si prefieres la instancia:
-//   // import { store } from "../state/store";
 
 import type {
   Product,

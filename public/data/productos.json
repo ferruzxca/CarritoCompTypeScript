@@ -305,7 +305,7 @@
     "stock": 12,
     "category": "headphones",
     "rating": 4.7,
-    "img": "airpodsm.jpg",
+    "img": "airpodsm.png",
     "shipFrom": "CDMX"
   },
 
@@ -368,7 +368,7 @@
     "stock": 30,
     "category": "accessory",
     "rating": 4.5,
-    "img": "mouse.jpg",
+    "img": "mouse.png",
     "shipFrom": "CDMX"
   },
   {
@@ -378,7 +378,7 @@
     "stock": 20,
     "category": "accessory",
     "rating": 4.6,
-    "img": "trackpad.jpg",
+    "img": "trackpad.png",
     "shipFrom": "CDMX"
   },
 
@@ -430,7 +430,7 @@
     "stock": 18,
     "category": "stylus",
     "rating": 4.8,
-    "img": "pencil.jpg",
+    "img": "pencil.png",
     "shipFrom": "CDMX"
   },
   {
@@ -440,7 +440,7 @@
     "stock": 20,
     "category": "stylus",
     "rating": 4.7,
-    "img": "pencil.jpg",
+    "img": "pencil.png",
     "shipFrom": "CDMX"
   },
   {
@@ -450,7 +450,7 @@
     "stock": 22,
     "category": "stylus",
     "rating": 4.5,
-    "img": "pencil.jpg",
+    "img": "pencil.png",
     "shipFrom": "CDMX"
   },
 
@@ -461,7 +461,7 @@
     "stock": 50,
     "category": "tracker",
     "rating": 4.7,
-    "img": "airtag.jpg",
+    "img": "airtag.png",
     "shipFrom": "CDMX"
   },
 
@@ -472,7 +472,7 @@
     "stock": 30,
     "category": "tracker",
     "rating": 4.8,
-    "img": "airtag4.jpg",
+    "img": "airtag4.png",
     "shipFrom": "CDMX"
   },
 
@@ -483,7 +483,7 @@
     "stock": 16,
     "category": "speaker",
     "rating": 4.6,
-    "img": "homepodm.jpg",
+    "img": "homepodm.png",
     "shipFrom": "CDMX"
   },
   
@@ -494,7 +494,7 @@
     "stock": 8,
     "category": "speaker",
     "rating": 4.7,
-    "img": "homepod.jpg",
+    "img": "homepod.png",
     "shipFrom": "CDMX"
   }
 ]

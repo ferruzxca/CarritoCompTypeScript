@@ -9,6 +9,7 @@
     "img": "iphone16.jpg",
     "shipFrom": "CDMX"
   },
+
   {
     "id": "p002",
     "name": "iPhone 16 Pro",
@@ -19,6 +20,7 @@
     "img": "iphone16.jpg",
     "shipFrom": "CDMX"
   },
+
   {
     "id": "p003",
     "name": "iPhone 16 Plus",
@@ -39,6 +41,7 @@
     "img": "iphone16.jpg",
     "shipFrom": "CDMX"
   },
+
   {
     "id": "p005",
     "name": "iPhone 15 Pro Max",
@@ -49,6 +52,7 @@
     "img": "iphone15.jpg",
     "shipFrom": "CDMX"
   },
+  
   {
     "id": "p006",
     "name": "iPhone 15 Pro",

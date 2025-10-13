@@ -219,11 +219,7 @@
     "stock": 6,
     "category": "desktop",
     "rating": 4.8,
-<<<<<<< HEAD
-    "img": "studio.jpg",
-=======
     "img": "display.jpg",
->>>>>>> 8ec5467 (Commit)
     "shipFrom": "CDMX"
   },
   {
@@ -233,11 +229,7 @@
     "stock": 3,
     "category": "desktop",
     "rating": 4.8,
-<<<<<<< HEAD
-    "img": "mini.jpg",
-=======
     "img": "prom.jpg",
->>>>>>> 8ec5467 (Commit)
     "shipFrom": "CDMX"
   },
 
@@ -382,11 +374,7 @@
     "stock": 20,
     "category": "accessory",
     "rating": 4.6,
-<<<<<<< HEAD
-    "img": "trackpad.JPG",
-=======
     "img": "trackpad.jpg",
->>>>>>> 8ec5467 (Commit)
     "shipFrom": "CDMX"
   },
 
@@ -438,11 +426,7 @@
     "stock": 18,
     "category": "stylus",
     "rating": 4.8,
-<<<<<<< HEAD
-    "img": "pencil.PNG",
-=======
     "img": "pencil.jpg",
->>>>>>> 8ec5467 (Commit)
     "shipFrom": "CDMX"
   },
   {
@@ -452,11 +436,7 @@
     "stock": 20,
     "category": "stylus",
     "rating": 4.7,
-<<<<<<< HEAD
-    "img": "pencil.PNG",
-=======
     "img": "pencil.jpg",
->>>>>>> 8ec5467 (Commit)
     "shipFrom": "CDMX"
   },
   {
@@ -466,11 +446,7 @@
     "stock": 22,
     "category": "stylus",
     "rating": 4.5,
-<<<<<<< HEAD
-    "img": "pencil.PNG",
-=======
     "img": "pencil.jpg",
->>>>>>> 8ec5467 (Commit)
     "shipFrom": "CDMX"
   },
 
@@ -481,17 +457,10 @@
     "stock": 50,
     "category": "tracker",
     "rating": 4.7,
-<<<<<<< HEAD
-    "img": "airtag.JPG",
-    "shipFrom": "CDMX"
-  },
-  
-=======
     "img": "airtag.jpg",
     "shipFrom": "CDMX"
   },
 
->>>>>>> 8ec5467 (Commit)
   {
     "id": "p046",
     "name": "AirTag (4 piezas)",
@@ -499,11 +468,7 @@
     "stock": 30,
     "category": "tracker",
     "rating": 4.8,
-<<<<<<< HEAD
-    "img": "airtag4.JPG",
-=======
     "img": "airtag4.jpg",
->>>>>>> 8ec5467 (Commit)
     "shipFrom": "CDMX"
   },
 
@@ -514,7 +479,7 @@
     "stock": 16,
     "category": "speaker",
     "rating": 4.6,
-    "img": "homepodm.JPG",
+    "img": "homepodm.jpg",
     "shipFrom": "CDMX"
   },
   
@@ -525,7 +490,7 @@
     "stock": 8,
     "category": "speaker",
     "rating": 4.7,
-    "img": "homepod.JPG",
+    "img": "homepod.jpg",
     "shipFrom": "CDMX"
   }
 ]

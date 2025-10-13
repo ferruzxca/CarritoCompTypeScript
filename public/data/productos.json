@@ -86,7 +86,7 @@
     "stock": 25,
     "category": "smartphone",
     "rating": 4.5,
-    "img": "iphone-se.jpg",
+    "img": "iphone_se.jpg",
     "shipFrom": "CDMX"
   },
 
@@ -209,7 +209,7 @@
     "stock": 18,
     "category": "desktop",
     "rating": 4.7,
-    "img": "mac-mini.jpg",
+    "img": "mini.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -219,7 +219,7 @@
     "stock": 6,
     "category": "desktop",
     "rating": 4.8,
-    "img": "mac-studio-m2-max.jpg",
+    "img": "studio.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -229,7 +229,7 @@
     "stock": 3,
     "category": "desktop",
     "rating": 4.8,
-    "img": "mac-pro-m2-ultra.jpg",
+    "img": "mini.jpg",
     "shipFrom": "CDMX"
   },
 
@@ -344,7 +344,7 @@
     "stock": 25,
     "category": "accessory",
     "rating": 4.6,
-    "img": "magic-keyboard.jpg",
+    "img": "keyboard.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -354,7 +354,7 @@
     "stock": 18,
     "category": "accessory",
     "rating": 4.7,
-    "img": "magic-keyboard-touch-id.jpg",
+    "img": "keyboard.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -364,7 +364,7 @@
     "stock": 30,
     "category": "accessory",
     "rating": 4.5,
-    "img": "magic-mouse.jpg",
+    "img": "mouse.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -374,7 +374,7 @@
     "stock": 20,
     "category": "accessory",
     "rating": 4.6,
-    "img": "magic-trackpad.jpg",
+    "img": "trackpad.jpg",
     "shipFrom": "CDMX"
   },
 
@@ -405,7 +405,7 @@
     "stock": 15,
     "category": "accessory",
     "rating": 4.5,
-    "img": "keyboard.jpg",
+    "img": "folio.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -415,7 +415,7 @@
     "stock": 9,
     "category": "accessory",
     "rating": 4.5,
-    "img": "keyboardjpg",
+    "img": "folio.jpg",
     "shipFrom": "CDMX"
   },
 
@@ -426,7 +426,7 @@
     "stock": 18,
     "category": "stylus",
     "rating": 4.8,
-    "img": "apple-pencil-pro.jpg",
+    "img": "pencil.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -436,7 +436,7 @@
     "stock": 20,
     "category": "stylus",
     "rating": 4.7,
-    "img": "apple-pencil-2nd-gen.jpg",
+    "img": "pencil.jpg",
     "shipFrom": "CDMX"
   },
   {
@@ -446,7 +446,7 @@
     "stock": 22,
     "category": "stylus",
     "rating": 4.5,
-    "img": "apple-pencil-usbc.jpg",
+    "img": "pencil.jpg",
     "shipFrom": "CDMX"
   },
 
@@ -457,9 +457,10 @@
     "stock": 50,
     "category": "tracker",
     "rating": 4.7,
-    "img": "airtag-1-pack.jpg",
+    "img": "airtag1.jpg",
     "shipFrom": "CDMX"
   },
+  
   {
     "id": "p046",
     "name": "AirTag (4 piezas)",
@@ -467,59 +468,7 @@
     "stock": 30,
     "category": "tracker",
     "rating": 4.8,
-    "img": "airtag-4-pack.jpg",
-    "shipFrom": "CDMX"
-  },
-
-  {
-    "id": "p047",
-    "name": "Cargador MagSafe",
-    "price": 1199,
-    "stock": 35,
-    "category": "charger",
-    "rating": 4.6,
-    "img": "magsafe-charger.jpg",
-    "shipFrom": "CDMX"
-  },
-  {
-    "id": "p048",
-    "name": "Batería MagSafe",
-    "price": 2999,
-    "stock": 14,
-    "category": "charger",
-    "rating": 4.5,
-    "img": "magsafe-battery-pack.jpg",
-    "shipFrom": "CDMX"
-  },
-  {
-    "id": "p049",
-    "name": "Adaptador USB-C 20W",
-    "price": 499,
-    "stock": 40,
-    "category": "charger",
-    "rating": 4.6,
-    "img": "usb-c-power-adapter-20w.jpg",
-    "shipFrom": "CDMX"
-  },
-
-  {
-    "id": "p050",
-    "name": "Cable USB-C 1 m",
-    "price": 399,
-    "stock": 60,
-    "category": "cable",
-    "rating": 4.6,
-    "img": "usb-c-cable-1m.jpg",
-    "shipFrom": "CDMX"
-  },
-  {
-    "id": "p051",
-    "name": "Cable USB-C 2 m",
-    "price": 699,
-    "stock": 55,
-    "category": "cable",
-    "rating": 4.6,
-    "img": "usb-c-cable-2m.jpg",
+    "img": "airtag4.jpg",
     "shipFrom": "CDMX"
   },
 
@@ -530,9 +479,10 @@
     "stock": 16,
     "category": "speaker",
     "rating": 4.6,
-    "img": "homepod-mini.jpg",
+    "img": "homepodm.jpg",
     "shipFrom": "CDMX"
   },
+  
   {
     "id": "p053",
     "name": "HomePod (2da gen)",
@@ -540,7 +490,7 @@
     "stock": 8,
     "category": "speaker",
     "rating": 4.7,
-    "img": "homepod-2nd-gen.jpg",
+    "img": "homepod.jpg",
     "shipFrom": "CDMX"
   }
 ]
